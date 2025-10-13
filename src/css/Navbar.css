@@ -1,0 +1,45 @@
+.navbar-container {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    }
+
+.nav-link {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+     }
+
+.nav-link:hover {
+    color: #b48cac;
+    transition: 0.3s;
+}   
+
+.imgnav {
+   width: 80px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow:0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc;
+  object-fit: contain;
+  }
+
+.carrito-icono {
+    width: 80px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow:0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc;
+  object-fit: contain;
+    }
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    position: absolute;
+    }
