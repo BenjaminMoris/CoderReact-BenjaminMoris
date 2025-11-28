@@ -1,0 +1,39 @@
+.cart-container {
+  padding: 1.5rem;
+}
+
+.cart-container h2 {
+  margin-bottom: 1rem;
+}
+
+.cart-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-container li {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cart-container button {
+  background: var(--color-danger);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cart-container button:hover {
+  background: #c9302c;
+}
+
+@media (max-width: 600px) {
+  .cart-container li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

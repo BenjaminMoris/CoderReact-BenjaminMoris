@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { products } from "../data/products";
 import ItemDetail from "../components/ItemDetail";
+import { fetchProductById } from "../services/products";
+
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
+  const [loading, setLoading] = useState(true);
   const { itemId } = useParams();
 
   useEffect(() => {
-   
-    const getProduct = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(products.find((p) => p.id === itemId));
-      }, 500);
+    setLoading(true);
+    fetchProductById(itemId).then(res => {
+      setItem(res);
+      setLoading(false);
     });
-
-    getProduct.then((res) => setItem(res));
   }, [itemId]);
 
-  return item ? <ItemDetail item={item} /> : <p>Cargando detalle...</p>;
-};
+  if (loading) return <p>Cargando detalle...</p>;
+  if (!item) return <p>Producto no encontrado.</p>;
 
+  return <ItemDetail item={item} />;
+};
 export default ItemDetailContainer;

@@ -1,0 +1,41 @@
+.checkout-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  background: var(--color-card);
+  border-radius: 8px;
+}
+
+.checkout-form h2 {
+  margin-bottom: 1rem;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkout-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.checkout-form button:hover {
+  background: var(--color-accent);
+  color: #000;
+}
+
+@media (max-width: 480px) {
+  .checkout-form {
+    padding: 1rem;
+  }
+}

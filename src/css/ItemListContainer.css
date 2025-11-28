@@ -1,7 +1,60 @@
 .item-list-container {
-    padding: 2rem;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    font-size: 1.5rem;
-    color: #333;
+  padding: 1rem;
+}
+
+.bienvenida {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.item-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  background: var(--color-card);
+  border-radius: 6px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+}
+
+.item-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.item-card p {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+}
+
+.btn-detail {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.btn-detail:hover {
+  background: var(--color-accent);
+  color: #000;
+}
+
+@media (max-width: 480px) {
+  .item-list {
+    grid-template-columns: 1fr;
+  }
 }
